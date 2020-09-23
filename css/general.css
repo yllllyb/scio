@@ -2,6 +2,10 @@
 
 @import 'variables.css';
 
+:focus {
+    outline: none;
+}
+
 :root {
     /* Browser default font-size is 16px, this way 1 rem = 10px */
     font-size: 62.5%;
@@ -51,6 +55,7 @@ h3 a.header:target::before,
 h4 a.header:target::before {
     display: inline-block;
     content: "»";
+    content: "->";
     margin-left: -30px;
     width: 30px;
 }
