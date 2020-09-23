@@ -59,7 +59,7 @@ z-index:-1
     </head>
     <body>
 
-<canvas class="cav"  onmousedown="re()"></canvas>
+<canvas id="cav"></canvas>
 
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
@@ -230,7 +230,8 @@ z-index:-1
 
 <script>
 window.onload = function(){re();}
-window.onresize = function(){rs();}
+window.onresize = function(){re();}
+function re(){
 var w = window.innerWidth;
 var h = window.innerHeight;
 var n = w*h/1000;
@@ -240,16 +241,6 @@ var color = "rgb(11,15,30)";
 c.height = h;
 c.width = w;
 var ctx = c.getContext("2d");
-
-function rs(){
-w = window.innerWidth;
-h = window.innerHeight;
-c.height = h;
-c.width = w;
-re();
-}
-
-function re(){
 ctx.fillStyle=color;
 ctx.fillRect(0,0,w,h);
 ctx.fillStyle="rgb(113,164,250)";
