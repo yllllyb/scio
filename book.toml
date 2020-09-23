@@ -7,7 +7,7 @@ title = "scio"
 
 [output.html]
 no-section-label = true
-theme = "theme"
+theme = "te"
 
 [output.html.fold]
 enable = true
