@@ -47,10 +47,19 @@
 
         
 
-    </head>
-    <body id="body">
+<style>
+cavans.cav{
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1
+}
+</style>
 
-<canvas style="display:none;" id="cav" onmousedown="re()"></canvas>
+    </head>
+    <body>
+
+<canvas class="cav"  onmousedown="re()"></canvas>
 
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
@@ -255,9 +264,6 @@ ctx.fill();
 ctx.closePath();
 //ctx.fillRect(x,y,r,r);
 }}
-
-document.getElementById("body").style.backgroundImage = 'url("' + ctx.canvas.toDataURL() + '")';
-
 </script>
 
         
